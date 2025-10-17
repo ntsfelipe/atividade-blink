@@ -9,6 +9,20 @@ A primeira parte da ponderada consiste em deixar o led interno aceso por um temp
 
 #### Vídeo de funcionamento - https://drive.google.com/file/d/1CCxx6U9y311XQHuGF3L3Gnriz9aHj5i_/view?usp=sharing
 
+```Arduino
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
+}
+```
+
+<hr>
 
 ## Parte 2 - Blink Externo - Semáforo de LED
 
@@ -21,3 +35,27 @@ A segunda parte da ponderada consiste em acender o led externo por um tempo X e 
 Dessa vez, optei também por fazer um mini semáforo com 3 leds.
 
 #### Vídeo de funcionamento - https://drive.google.com/file/d/1Gr6ke81j99so45VD7PbflQSPD4QJOGoY/view?usp=sharing
+
+```Arduino
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+  }
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
+  digitalWrite(12, HIGH);
+  delay(1000);
+  digitalWrite(12, LOW);
+  delay(1000);
+  digitalWrite(11, HIGH);
+  delay(1000);
+  digitalWrite(11, LOW);
+  delay(1000);
+}
+
+```
